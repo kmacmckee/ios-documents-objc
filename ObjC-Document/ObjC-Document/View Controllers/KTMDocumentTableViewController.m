@@ -17,13 +17,21 @@
 
 @implementation KTMDocumentTableViewController
 
-@synthesize documentController = _documentController;
-- (KTMDocumentController *)documentController {
-    if (!_documentController) {
+- (instancetype)initWithCoder:(NSCoder *)coder {
+    self = [super initWithCoder:coder];
+    if (self) {
         _documentController = [[KTMDocumentController alloc] init];
-
     }
-    return _documentController;
+    return self;
+}
+
+
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        _documentController = [[KTMDocumentController alloc] init];
+    }
+    return self;
 }
 
 

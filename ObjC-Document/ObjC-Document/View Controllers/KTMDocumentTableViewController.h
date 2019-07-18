@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface KTMDocumentTableViewController : UITableViewController
 
-@property (nonatomic) KTMDocumentController *documentController;
+@property (nonatomic, copy) KTMDocumentController *documentController;
 
 @end
 

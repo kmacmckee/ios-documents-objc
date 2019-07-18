@@ -33,7 +33,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self updateViews];
+    [self setUpTextView];
     [[self docTextView] setDelegate:self];
+}
+
+- (void)setUpTextView {
+    self.docTextView.layer.cornerRadius = 6;
+    self.docTextView.layer.borderColor = UIColor.blackColor.CGColor;
+    self.docTextView.layer.borderWidth = 0.2;
 }
 
 
