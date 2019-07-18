@@ -7,31 +7,74 @@
 //
 
 #import "KTMDocumentViewController.h"
+#import "KTMDocumentController.h"
+#import "KTMDocument.h"
+#import "NSString+KTMWordCount.h"
+
 
 @interface KTMDocumentViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *wordCountLabel;
 @property (weak, nonatomic) IBOutlet UITextField *titleTextField;
-@property (weak, nonatomic) IBOutlet UITextView *documnetTextView;
-
+@property (weak, nonatomic) IBOutlet UITextView *docTextView;
 @end
+
+
 
 @implementation KTMDocumentViewController
 
+- (void)setDocument:(KTMDocument *)document {
+    if (document != _document) {
+        _document = document;
+        [self updateViews];
+    }
+}
+
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [[self docTextView] setDelegate:self];
 }
+
+
+- (void)updateViews {
+    if (!self.document) { return; }
+    self.title = self.document.title;
+    self.titleTextField.text = self.document.title;
+    self.docTextView.text = self.document.docText;
+    self.wordCountLabel.text = [NSString stringWithFormat:@"%lu words", (unsigned long)self.document.docText.ktm_wordCount];
+}
+
+
+- (void)updateWordCount {
+    if ([self.docTextView.text isEqualToString:@""]) {
+        self.wordCountLabel.text = @"0 words";
+    } else {
+        self.wordCountLabel.text = [NSString stringWithFormat:@"%lu words", (unsigned long)self.docTextView.text.ktm_wordCount];
+    }
+}
+
+- (void)textViewDidChange:(UITextView *)textView {
+    [self updateWordCount];
+}
+
+
+
+
 - (IBAction)saveButtonPressed:(id)sender {
+    NSString *title = self.titleTextField.text;
+    NSString *docText = self.docTextView.text;
+    
+    if (!self.document) {
+        [self.documentController createDocumentWithTitle:title docText:docText];
+    } else {
+        [self.documentController updateDocument:self.document withTitle:title docText:docText];
+    }
+    
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+
 
 @end

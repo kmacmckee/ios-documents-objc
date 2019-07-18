@@ -7,10 +7,22 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "KTMDocumentController.h"
+#import "KTMDocument.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface KTMDocumentViewController : UIViewController
+@interface KTMDocumentViewController : UIViewController <UITextViewDelegate>
+
+@property KTMDocumentController *documentController;
+@property (nonatomic) KTMDocument *document;
+
+- (void)updateViews;
+- (void)updateWordCount;
+- (void)setDocument:(KTMDocument *)document;
+
+
+
 
 @end
 

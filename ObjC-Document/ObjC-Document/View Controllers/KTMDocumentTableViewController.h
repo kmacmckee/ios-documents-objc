@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "KTMDocumentController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface KTMDocumentTableViewController : UITableViewController
+
+@property (nonatomic) KTMDocumentController *documentController;
 
 @end
 

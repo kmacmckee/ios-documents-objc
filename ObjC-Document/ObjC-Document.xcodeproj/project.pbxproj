@@ -16,6 +16,8 @@
 		C4D28EDF22DFCCEB0072EFC3 /* KTMDocumentTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D28EDE22DFCCEB0072EFC3 /* KTMDocumentTableViewController.m */; };
 		C4D28EE222DFCD6C0072EFC3 /* KTMDocumentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D28EE122DFCD6C0072EFC3 /* KTMDocumentViewController.m */; };
 		C4D28EE622DFCEE20072EFC3 /* NSString+KTMWordCount.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D28EE522DFCEE20072EFC3 /* NSString+KTMWordCount.m */; };
+		C4D28EE922DFD5BC0072EFC3 /* KTMDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D28EE822DFD5BC0072EFC3 /* KTMDocument.m */; };
+		C4D28EED22DFDD450072EFC3 /* KTMDocumentController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D28EEC22DFDD450072EFC3 /* KTMDocumentController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,10 @@
 		C4D28EE122DFCD6C0072EFC3 /* KTMDocumentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KTMDocumentViewController.m; sourceTree = "<group>"; };
 		C4D28EE422DFCEE20072EFC3 /* NSString+KTMWordCount.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+KTMWordCount.h"; sourceTree = "<group>"; };
 		C4D28EE522DFCEE20072EFC3 /* NSString+KTMWordCount.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+KTMWordCount.m"; sourceTree = "<group>"; };
+		C4D28EE722DFD5BC0072EFC3 /* KTMDocument.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KTMDocument.h; sourceTree = "<group>"; };
+		C4D28EE822DFD5BC0072EFC3 /* KTMDocument.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KTMDocument.m; sourceTree = "<group>"; };
+		C4D28EEB22DFDD450072EFC3 /* KTMDocumentController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KTMDocumentController.h; sourceTree = "<group>"; };
+		C4D28EEC22DFDD450072EFC3 /* KTMDocumentController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KTMDocumentController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +98,8 @@
 				C4D28EE422DFCEE20072EFC3 /* NSString+KTMWordCount.h */,
 				C4D28EE522DFCEE20072EFC3 /* NSString+KTMWordCount.m */,
 				C4D28EBF22DFAD740072EFC3 /* Main.storyboard */,
+				C4D28EEE22DFE8C20072EFC3 /* Model Controller */,
+				C4D28EEA22DFDD1D0072EFC3 /* Models */,
 				C4D28EC222DFAD750072EFC3 /* Assets.xcassets */,
 				C4D28EC422DFAD750072EFC3 /* LaunchScreen.storyboard */,
 				C4D28EE322DFCEBB0072EFC3 /* View Controllers */,
@@ -119,6 +127,24 @@
 				C4D28EE122DFCD6C0072EFC3 /* KTMDocumentViewController.m */,
 			);
 			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		C4D28EEA22DFDD1D0072EFC3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C4D28EE722DFD5BC0072EFC3 /* KTMDocument.h */,
+				C4D28EE822DFD5BC0072EFC3 /* KTMDocument.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C4D28EEE22DFE8C20072EFC3 /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C4D28EEB22DFDD450072EFC3 /* KTMDocumentController.h */,
+				C4D28EEC22DFDD450072EFC3 /* KTMDocumentController.m */,
+			);
+			path = "Model Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,6 +249,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4D28EE222DFCD6C0072EFC3 /* KTMDocumentViewController.m in Sources */,
+				C4D28EE922DFD5BC0072EFC3 /* KTMDocument.m in Sources */,
+				C4D28EED22DFDD450072EFC3 /* KTMDocumentController.m in Sources */,
 				C4D28EE622DFCEE20072EFC3 /* NSString+KTMWordCount.m in Sources */,
 				C4D28EC922DFAD750072EFC3 /* main.m in Sources */,
 				C4D28EDF22DFCCEB0072EFC3 /* KTMDocumentTableViewController.m in Sources */,

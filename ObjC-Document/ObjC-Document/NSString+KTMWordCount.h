@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NSString (KTMWordCount)
 
-- (int)ktm_wordCount;
+- (NSUInteger)ktm_wordCount;
 
 @end
 
